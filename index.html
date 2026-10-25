@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DSP9AI — Secret Archive</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="matrix matrix-left" aria-hidden="true"></div><div class="matrix matrix-right" aria-hidden="true"></div>
+<div class="scanlines"></div>
+<header class="topbar">
+  <a class="brand" href="#"><span class="logo">D9</span><span><b>DSP9AI</b><small>DEEP. STRANGE. PIDZETS.</small></span></a>
+  <nav><a class="selected" href="index.html">Главная</a><a href="objects.html">Объекты</a><a href="incidents.html">Инциденты</a><a href="anomalies.html">Аномалии</a><a href="employees.html">Сотрудники</a></nav>
+  <div class="access">ДОСТУП <b>УРОВЕНЬ 9</b></div>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-text">
+      <p class="eyebrow"><i></i> ЗАКРЫТЫЙ АРХИВ // DSP9AI CORE</p>
+      <h1>НЕ ВСЁ, ЧТО СУЩЕСТВУЕТ,<br><em>ДОЛЖНО БЫТЬ ОБЪЯСНЕНО.</em></h1>
+      <p class="intro">Независимая организация по обнаружению, изучению и документированию аномалий, выходящих за пределы привычной реальности.</p>
+      <div class="actions"><a class="primary" href="objects.html">ОТКРЫТЬ АРХИВ <span>↗</span></a><a class="secondary" href="#about">О ПОДРАЗДЕЛЕНИИ</a></div>
+      <div class="status"><span>СИСТЕМА: <b>АКТИВНА</b></span><span>ПОСЛЕДНЯЯ СИНХРОНИЗАЦИЯ: <b>23.05.2024</b></span></div>
+    </div>
+    <div class="seal"><div class="seal-inner"><small>DEPARTMENT OF</small><b>DSP9</b><span>SECURITY PROTOCOL</span><strong>✳</strong></div><p>ДАННЫЕ ЗАСЕКРЕЧЕНЫ</p></div>
+  </section>
+  <div class="alert"><b>ВНИМАНИЕ / ПРОТОКОЛ 09</b><span>Неизвестные объекты не следует изучать без предварительной фиксации и оценки риска.</span><span class="alert-code">DSP—09</span></div>
+  <section class="about" id="about">
+    <div class="about-copy"><p class="eyebrow">01 // ОРГАНИЗАЦИЯ</p><h2>Что такое <em>DSP9AI</em>?</h2>
+      <p>Мы фиксируем то, что не должно существовать по известным законам мира. <strong>Необъяснимые существа</strong>, нарушения пространства, странные места и события, которым не находится рационального объяснения, становятся частью единого архива.</p>
+      <p>Задача организации — <strong>наблюдать, собирать свидетельства, сравнивать свойства аномалий</strong> и предупреждать о потенциальных угрозах. Даже если явление невозможно понять полностью, его можно изучить достаточно, чтобы не действовать вслепую.</p>
+      <p>В основе работы лежит простое правило: <strong>сначала наблюдение, затем классификация, после — выводы.</strong> Архив хранит как подтверждённые сведения, так и <strong>гипотезы, чья достоверность ещё не установлена.</strong></p>
+      <blockquote>«Неизвестное не исчезает оттого, что мы отказываемся его замечать».</blockquote>
+    </div>
+    <aside class="file-card"><div class="file-head"><span>ВНУТРЕННИЙ ДОКУМЕНТ</span><b>№ 09-A</b></div><div class="file-symbol">◉</div><h3>DSP9AI CORE</h3><p>АРХИВ НАБЛЮДЕНИЯ<br>И КЛАССИФИКАЦИИ АНОМАЛИЙ</p><div class="file-line"></div><div class="file-row"><span>СТАТУС</span><b class="red">АКТИВЕН</b></div><div class="file-row"><span>ДОСТУП</span><b>ОГРАНИЧЕН</b></div><div class="stamp">ЗАСЕКРЕЧЕНО</div></aside>
+  </section>
+  <section class="sections"><div class="section-heading"><div><p class="eyebrow">02 // НАВИГАЦИЯ</p><h2>Разделы архива</h2></div><span>INDEX / 001—003</span></div>
+    <div class="tiles"><article><div class="tile-top"><span>01</span><b>▣</b></div><h3>Объекты</h3><p>Основной реестр: досье, способности, слабости, статусы и классификация известных объектов.</p><a href="objects.html">ОТКРЫТЬ РАЗДЕЛ ↗</a></article><article><div class="tile-top"><span>02</span><b>⚠</b></div><h3>Инциденты</h3><p>Журнал происшествий, наблюдений, нарушений протоколов и контактов с аномалиями.</p><a href="incidents.html">ОТКРЫТЬ РАЗДЕЛ ↗</a></article><article><div class="tile-top"><span>03</span><b>⌁</b></div><h3>Аномалии</h3><p>Необычные явления и сущности вне девятки — отдельная категория без места в главном рейтинге.</p><a href="anomalies.html">ОТКРЫТЬ РАЗДЕЛ ↗</a></article></div>
+  </section>
+  <footer><span>DSP9AI © ВНУТРЕННИЙ АРХИВ</span><span>DEEP. STRANGE. PIDZETS.</span><span>НЕ ВСЕ ДАННЫЕ ДОСТУПНЫ</span></footer>
+</main>
+<script>
+const glyphs = "0123456789ABCDEF<>/{}[]DSP9AI";
+document.querySelectorAll(".matrix").forEach((col, index) => {
+  let seed = index + 9, output = "";
+  for (let i = 0; i < 170; i++) {
+    seed = (seed * 9301 + 49297) % 233280;
+    output += glyphs[Math.floor(seed / 233280 * glyphs.length)] + (i % 3 === 0 ? "<br>" : " ");
+  }
+  col.innerHTML = output;
+});
+</script>
+</body></html>
